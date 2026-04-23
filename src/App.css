@@ -1,33 +1,52 @@
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: "Segoe UI", sans-serif;
   background: #0f172a;
   color: white;
 }
 
-.container {
-  text-align: center;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #020617;
+  position: sticky;
+  top: 0;
 }
 
-section {
-  padding: 60px 20px;
+.navbar div a {
+  margin-left: 20px;
+  cursor: pointer;
 }
 
+/* HERO */
 .hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(135deg, #3b82f6, #9333ea);
 }
 
 .btn {
-  display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
   background: white;
   color: black;
-  text-decoration: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-.skill-list span {
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* SKILLS */
+.skills span {
   margin: 10px;
   padding: 10px 15px;
   background: #1e293b;
@@ -35,10 +54,22 @@ section {
   display: inline-block;
 }
 
+/* PROJECTS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .card {
   background: #1e293b;
   padding: 20px;
-  margin: 20px auto;
-  width: 300px;
+  width: 250px;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
