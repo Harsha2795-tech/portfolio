@@ -1,30 +1,42 @@
 import "./App.css";
+import { Link } from "react-scroll";
 
 function App() {
   return (
-    <div className="container">
+    <div>
+
+      {/* NAVBAR */}
+      <nav className="navbar">
+        <h2>Harsha</h2>
+        <div>
+          <Link to="about" smooth={true}>About</Link>
+          <Link to="projects" smooth={true}>Projects</Link>
+          <Link to="contact" smooth={true}>Contact</Link>
+        </div>
+      </nav>
 
       {/* HERO */}
       <section className="hero">
         <h1>Harsha Nandala</h1>
-        <p>CSE Student | Aspiring Software Engineer</p>
-        <a href="#projects" className="btn">View Projects</a>
+        <p>Software Developer | ML Enthusiast</p>
+        <Link to="projects" smooth={true} className="btn">
+          View Projects
+        </Link>
       </section>
 
       {/* ABOUT */}
-      <section className="about">
+      <section id="about" className="section">
         <h2>About Me</h2>
         <p>
-          I am a Computer Science student at Mahindra University with interest in
-          Machine Learning and Software Development. I enjoy building real-world
-          applications and learning new technologies.
+          I am a Computer Science student passionate about Machine Learning,
+          Software Development, and building impactful applications.
         </p>
       </section>
 
       {/* SKILLS */}
-      <section className="skills">
+      <section className="section">
         <h2>Skills</h2>
-        <div className="skill-list">
+        <div className="skills">
           <span>C</span>
           <span>Python</span>
           <span>Java</span>
@@ -34,25 +46,30 @@ function App() {
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" className="projects">
+      <section id="projects" className="section">
         <h2>Projects</h2>
 
-        <div className="card">
-          <h3>Movie Sentiment Analysis</h3>
-          <p>
-            NLP-based project analyzing movie reviews using preprocessing techniques
-            like tokenization and stemming.
-          </p>
-          <a href="https://github.com/your-username/project">GitHub</a>
+        <div className="cards">
+          <div className="card">
+            <h3>Movie Sentiment Analysis</h3>
+            <p>NLP project analyzing movie reviews.</p>
+            <a href="https://github.com/your-username/project">GitHub</a>
+          </div>
+
+          <div className="card">
+            <h3>Portfolio Website</h3>
+            <p>React-based personal portfolio.</p>
+            <a href="#">Live</a>
+          </div>
         </div>
 
       </section>
 
       {/* CONTACT */}
-      <section className="contact">
+      <section id="contact" className="section">
         <h2>Contact</h2>
-        <p>📞 9014544640</p>
         <p>📧 harshaanandala@gmail.com</p>
+        <p>📞 9014544640</p>
       </section>
 
     </div>
